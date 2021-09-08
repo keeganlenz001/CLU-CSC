@@ -136,5 +136,5 @@ def calculate():
         print(f"{Colors.Fg.lightBlue}Result:{Colors.reset}", f"{Colors.Fg.yellow}", result, f"{Colors.reset}", '\n')
         reset()
 
-
+print("Hello?")
 first_number()
