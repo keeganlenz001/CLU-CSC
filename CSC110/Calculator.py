@@ -137,4 +137,5 @@ def calculate():
         reset()
 
 
+print("Is this thing on?")
 first_number()
