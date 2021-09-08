@@ -137,5 +137,4 @@ def calculate():
         reset()
 
 
-print("Hello?")
 first_number()
