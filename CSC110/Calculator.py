@@ -57,7 +57,7 @@ def first_number():
         operator()
     except ValueError:
         print(f"{Colors.Fg.red}Please enter a valid number{Colors.reset} ")
-        print('\n')
+        print()
         first_number()
 
 
@@ -70,7 +70,7 @@ def operator():
         second_number()
     else:
         print(f"{Colors.Fg.red}Please enter a valid operator{Colors.reset} ")
-        print('\n')
+        print()
         operator()
 
 
@@ -80,16 +80,19 @@ def second_number():
     num2 = input('What will be your second number? ')
 
     if opp == '/' and num2 == '0':
+        print()
         print(f"{Colors.Fg.red}YOU CANNOT DIVIDE BY ZERO!{Colors.reset}")
+        print()
         second_number()
     else:
         try:
             float(num2)
-            print(f"{Colors.Fg.yellow}", num2, f"{Colors.reset}", '\n')
+            print(f"{Colors.Fg.yellow}", num2, f"{Colors.reset}")
+            print()
             calculate()
         except ValueError:
             print(f"{Colors.Fg.red}Please enter a valid number{Colors.reset} ")
-            print('\n')
+            print()
             second_number()
 
 
@@ -102,7 +105,7 @@ def reset():
         print(f"{Colors.Fg.yellow}", num1, f"{Colors.reset}")
         operator()
     elif clear == 'N' or clear == 'n':
-        print('\n')
+        print()
         first_number()
     else:
         print('Type "Y" for yes or "N" for no ')
@@ -117,28 +120,31 @@ def calculate():
     if opp == '+':
         result = float(num1) + float(num2)
         print(num1, opp, num2, '=', result)
-        print(f"{Colors.Fg.lightBlue}Result:{Colors.reset}", f"{Colors.Fg.yellow}", result, f"{Colors.reset}", '\n')
+        print(f"{Colors.Fg.lightBlue}Result:{Colors.reset}", f"{Colors.Fg.yellow}", result, f"{Colors.reset}")
         reset()
 
     # Subtraction Logic
     if opp == '-':
         result = float(num1) - float(num2)
         print(num1, opp, num2, '=', result)
-        print(f"{Colors.Fg.lightBlue}Result:{Colors.reset}", f"{Colors.Fg.yellow}", result, f"{Colors.reset}", '\n')
+        print(f"{Colors.Fg.lightBlue}Result:{Colors.reset}", f"{Colors.Fg.yellow}", result, f"{Colors.reset}")
+        print()
         reset()
 
     # Multiplication Logic
     if opp == '*':
         result = float(num1) * float(num2)
         print(num1, opp, num2, '=', result)
-        print(f"{Colors.Fg.lightBlue}Result:{Colors.reset}", f"{Colors.Fg.yellow}", result, f"{Colors.reset}", '\n')
+        print(f"{Colors.Fg.lightBlue}Result:{Colors.reset}", f"{Colors.Fg.yellow}", result, f"{Colors.reset}")
+        print()
         reset()
 
     # Division Logic
     if opp == '/':
         result = float(num1) / float(num2)
         print(num1, opp, num2, '=', result)
-        print(f"{Colors.Fg.lightBlue}Result:{Colors.reset}", f"{Colors.Fg.yellow}", result, f"{Colors.reset}", '\n')
+        print(f"{Colors.Fg.lightBlue}Result:{Colors.reset}", f"{Colors.Fg.yellow}", result, f"{Colors.reset}")
+        print()
         reset()
 
 
