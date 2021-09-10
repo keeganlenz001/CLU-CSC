@@ -78,14 +78,19 @@ def operator():
 def second_number():
     global num2
     num2 = input('What will be your second number? ')
-    try:
-        float(num2)
-        print(f"{Colors.Fg.yellow}", num2, f"{Colors.reset}", '\n')
-        calculate()
-    except ValueError:
-        print(f"{Colors.Fg.red}Please enter a valid number{Colors.reset} ")
-        print('\n')
+
+    if opp == '/':
+        print(f"{Colors.Fg.red}YOU CANNOT DIVIDE BY ZERO!{Colors.reset}")
         second_number()
+    else:
+        try:
+            float(num2)
+            print(f"{Colors.Fg.yellow}", num2, f"{Colors.reset}", '\n')
+            calculate()
+        except ValueError:
+            print(f"{Colors.Fg.red}Please enter a valid number{Colors.reset} ")
+            print('\n')
+            second_number()
 
 
 # Allows for user to continue using the result of their previous operation or reset and begin a new operation
