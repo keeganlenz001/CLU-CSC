@@ -79,7 +79,7 @@ def second_number():
     global num2
     num2 = input('What will be your second number? ')
 
-    if opp == '/':
+    if opp == '/' and num2 == '0':
         print(f"{Colors.Fg.red}YOU CANNOT DIVIDE BY ZERO!{Colors.reset}")
         second_number()
     else:
