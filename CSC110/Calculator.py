@@ -137,5 +137,5 @@ def calculate():
         reset()
 
 
-print("No it's not on")
+
 first_number()
