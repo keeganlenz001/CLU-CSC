@@ -7,6 +7,7 @@ operator = ''
 
 num1 = 0
 num2 = 0
+user_answer = 0
 answer = 0
 
 
@@ -56,15 +57,20 @@ def calc():
     elif operator == '%':
         answer = num1 % num2
 
-    answer = round(answer, 2)
-    result()
+    get_input()
+
+
+def get_input():
+    global user_answer
+    print('What is', num1, operator, num2)
+    try:
+        user_answer = float(input())
+        result()
+    except ValueError:
+        result()
 
 
 def result():
-    print('What is', num1, operator, num2)
-    print(answer)
-    user_answer = float(input())
-
     if user_answer == answer:
         print('Good job, you got it right!')
     else:
