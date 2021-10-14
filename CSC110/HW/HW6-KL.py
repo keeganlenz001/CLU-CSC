@@ -23,7 +23,7 @@ if option == 1:
                 data = infile.readline()
                 cars = data.split(',')
                 try:
-                    price = int(cars[9])
+                    price = int(cars[len(cars) - 1])
                 except ValueError:
                     print()
                 if price < price_range:
@@ -31,7 +31,6 @@ if option == 1:
                 infile.__next__()
             except StopIteration:
                 break
-            # infile.close()
     read_file()
 
     if cars_in_range != []:
@@ -57,16 +56,19 @@ if option == 1:
                     car_list = file.readlines()
                     new_data = infile.readline()
                     car = new_data.split(',')
-                    infile.close()
 
                     print()
                     new_file = open("Automobile_data.csv", "w")
                     for new_data in car_list:
-                        print(car)
-                        if car != cars_in_range[0]:
-                            new_file.write(new_data)
-                            new_data = infile.__next__()
+                        if car != cars_in_range[i]:
+                            new_file.write(','.join(car))
                             car = new_data.split(',')
+                        else:
+                            car = new_data.split(',')
+                    new_data = infile.readline()
+                    if car != cars_in_range[i]:
+                        new_file.write(','.join(car))
+            infile.close()
             new_file.close()
         else:
             print('Thank you for shopping!')
