@@ -32,7 +32,7 @@ if option == 1:
                 break
     read_file()
 
-    if cars_in_range != []:
+    if cars_in_range:
         print('Cars that are in your price range:')
         file = open("Automobile_data.csv", "r")
         first_line = file.readline()
