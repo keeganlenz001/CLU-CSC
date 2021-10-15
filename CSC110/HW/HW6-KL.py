@@ -17,7 +17,7 @@ if option == 1:
         infile = open("Automobile_data.csv", "r")
         line = open("Automobile_data.csv", "r")
         data = infile.readline()
-        while data != 0:
+        while data != '':
             try:
                 global cars
                 data = infile.readline()
@@ -25,10 +25,9 @@ if option == 1:
                 try:
                     price = int(cars[len(cars) - 1])
                 except ValueError:
-                    print()
+                    pass
                 if price < price_range:
                     cars_in_range.append(cars)
-                infile.__next__()
             except StopIteration:
                 break
     read_file()
@@ -40,7 +39,8 @@ if option == 1:
 
         print(first_line, end='')
         for i in range(len(cars_in_range)):
-            print(cars_in_range[i])
+            if cars_in_range[i] != ['']:
+                print(cars_in_range[i])
 
         print()
         selected_car = input("What car would you like to buy (Enter the car's index or type EXIT to quit "
@@ -68,6 +68,7 @@ if option == 1:
                     new_data = infile.readline()
                     if car != cars_in_range[i]:
                         new_file.write(','.join(car))
+                    break
             infile.close()
             new_file.close()
         else:
@@ -75,9 +76,17 @@ if option == 1:
     else:
         print('There are no cars in your price range')
 else:
+    with open("Automobile_data.csv", "r") as last_index:
+        for line in last_index:
+            pass
+        last_line = line
+        last_car = last_line.split(',')
+        last_car_index = last_car[0]
+    last_index.close()
+
     inventory = open("Automobile_data.csv", "a")
-    added_car = '89,'
     comma = ','
+    added_car = str((int(last_car_index) + 1)) + comma
 
     company = input('Company: ')
     body_style = input('Body-style: ')

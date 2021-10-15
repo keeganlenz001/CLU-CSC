@@ -12,7 +12,6 @@ index,company,body-style,wheel-base,length,engine-type,num-of-cylinders,horsepow
 13,bmw,sedan,103.5,189,ohc,six,182,16,30760
 14,bmw,sedan,103.5,193.8,ohc,six,182,16,41315
 15,bmw,sedan,110,197,ohc,six,182,15,36880
-16,chevrolet,hatchback,88.4,141.1,l,three,48,47,5151
 17,chevrolet,hatchback,94.5,155.9,ohc,four,70,38,6295
 18,chevrolet,sedan,94.5,158.8,ohc,four,70,38,6575
 19,dodge,hatchback,93.7,157.3,ohc,four,68,31,6377
@@ -26,7 +25,6 @@ index,company,body-style,wheel-base,length,engine-type,num-of-cylinders,horsepow
 33,jaguar,sedan,113,199.6,dohc,six,176,15,32250
 34,jaguar,sedan,113,199.6,dohc,six,176,15,35550
 35,jaguar,sedan,102,191.7,ohcv,twelve,262,13,36000
-36,mazda,hatchback,93.1,159.1,ohc,four,68,30,5195
 37,mazda,hatchback,93.1,159.1,ohc,four,68,31,6095
 38,mazda,hatchback,93.1,159.1,ohc,four,68,31,6795
 39,mazda,hatchback,95.3,169,rotor,two,101,17,11845
@@ -46,7 +44,6 @@ index,company,body-style,wheel-base,length,engine-type,num-of-cylinders,horsepow
 61,porsche,hardtop,89.5,168.9,ohcf,six,207,17,34028
 62,porsche,convertible,89.5,168.9,ohcf,six,207,17,37028
 63,porsche,hatchback,98.4,175.7,dohcv,eight,288,17,
-66,toyota,hatchback,95.7,158.7,ohc,four,62,35,5348
 67,toyota,hatchback,95.7,158.7,ohc,four,62,31,6338
 68,toyota,hatchback,95.7,158.7,ohc,four,62,31,6488
 69,toyota,wagon,95.7,169.7,ohc,four,62,31,6918
@@ -59,3 +56,7 @@ index,company,body-style,wheel-base,length,engine-type,num-of-cylinders,horsepow
 86,volkswagen,sedan,97.3,171.7,ohc,four,100,26,9995
 87,volvo,sedan,104.3,188.8,ohc,four,114,23,12940
 88,volvo,wagon,104.3,188.8,ohc,four,114,23,13415
+89,volvo,sedan,104.3,188.8,ohc,four,114,23,5000
+89,volvo,wagon,100,188.8,ohc,four,114,23,5500
+89,toyota,wagon,95.7,169.7,ohc,four,62,27,5600
+90,a,a,a,a,a,a,a,a,5000
